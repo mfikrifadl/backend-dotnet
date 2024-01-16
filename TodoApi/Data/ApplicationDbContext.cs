@@ -1,6 +1,9 @@
-﻿namespace TodoApi.Data
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using TodoApi.Entities;
+
+namespace TodoApi.Data
 {
-    public class ApplicationDbContext:DbContext
+    public class ApplicationDbContext: IdentityDbContext<User>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
